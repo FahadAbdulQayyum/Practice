@@ -10,8 +10,8 @@ const App = () => {
       {/* <h3>Testing Dude</h3> */}
       <BrowserRouter>
         <Routes>
-          <Route path={'/App2'} exact element={<App2 />} />
-          <Route path={'/App3'} exact element={<App3 />} />
+          <Route path={'/App2'} element={<App2 />} />
+          <Route path={'/App3'} element={<App3 />} />
         </Routes>
         <div>
           <Link to={'/App2'}>Go to App2</Link>
