@@ -6,13 +6,16 @@ import App3 from './App3'
 
 const App = () => {
   console.log('windows', window.location.hostname)
+  let host = window.location.hostname;
   return (
     <div>
       <h3>Testing Dude</h3>
       <BrowserRouter>
         <Routes>
-          <Route path={'/App2'} element={<App2 />} />
-          <Route path={'/App3'} element={<App3 />} />
+          {/* <Route path={`/App2`} element={<App2 />} />
+          <Route path={`/App3`} element={<App3 />} /> */}
+          <Route path={`${host}/App2`} element={<App2 />} />
+          <Route path={`${host}/App3`} element={<App3 />} />
         </Routes>
         <div>
           <Link to={'/App2'}>Go to App2</Link>
