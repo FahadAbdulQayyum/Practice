@@ -5,6 +5,7 @@ import App3 from './App3'
 
 
 const App = () => {
+  console.log('windows', window.location.hostname)
   return (
     <div>
       <h3>Testing Dude</h3>
