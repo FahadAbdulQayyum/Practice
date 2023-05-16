@@ -13,10 +13,15 @@ const Home = () => {
     dispatch({ type: "decrement" });
   };
 
+  const addBtn25 = () => {
+    dispatch({ type: "incrementByValue", payload: 25 });
+  };
+
   return (
     <div>
       <h2>{c}</h2>
       <button onClick={addBtn}>increment</button>
+      <button onClick={addBtn25}>incrementBy25</button>
       <button onClick={subBtn}>decrement</button>
     </div>
   );
