@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import globalContext from '../global/globalContext';
 
-const Form = ({ addStudent }) => {
+const Form = () => {
 
     const [state, setState] = useState({
         name: '',
         age: '',
     })
+
+    const { addStudent } = useContext(globalContext)
 
     const onSub = e => {
         e.preventDefault();

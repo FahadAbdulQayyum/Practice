@@ -1,28 +1,25 @@
-import React, { useReducer } from "react";
-import globalContext from "./globalContext";
-import globalReducer from "./globalReducer";
+import React, { useReducer } from 'react';
+import globalContext from './globalContext';
+import globalReducer from './globalReducer';
 
 const GlobalState = props => {
     const initialState = {
-        students: [
-            {
-                name: 'FAhad',
-                age: '44'
-            }
-        ]
+        students: []
     }
 
-    const [state, dispatch] = useReducer(globalReducer, initialState);
+    const [state, dispatch] = useReducer(globalReducer, initialState)
 
-    const addStudents = newStudent => dispatch({
-        type: "ADD_STUDENT",
-        payload: newStudent
-    })
+    const addStudent = newStudent => {
+        dispatch({
+            type: "ADD_STUDENT",
+            payload: newStudent
+        })
+    }
 
     return <globalContext.Provider
         value={{
             students: state.students,
-            addStudents: addStudents
+            addStudent: addStudent
         }}
     >
         {props.children}
@@ -30,3 +27,37 @@ const GlobalState = props => {
 }
 
 export default GlobalState;
+
+
+// import React, { useReducer } from "react";
+// import globalContext from "./globalContext";
+// import globalReducer from "./globalReducer";
+
+// const GlobalState = props => {
+//     const initialState = {
+//         students: [
+//             {
+//                 name: 'FAhad',
+//                 age: '44'
+//             }
+//         ]
+//     }
+
+//     const [state, dispatch] = useReducer(globalReducer, initialState);
+
+//     const addStudents = newStudent => dispatch({
+//         type: "ADD_STUDENT",
+//         payload: newStudent
+//     })
+
+//     return <globalContext.Provider
+//         value={{
+//             students: state.students,
+//             addStudents: addStudents
+//         }}
+//     >
+//         {props.children}
+//     </globalContext.Provider>
+// }
+
+// export default GlobalState;
