@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Students from './components/students'
 import Form from './components/form'
+import GlobalState from './global/globalState'
 
 const App = () => {
 
@@ -9,10 +10,10 @@ const App = () => {
   const addStudent = newStudent => setStudent([...student, newStudent])
 
   return (
-    <>
+    <GlobalState>
       <Form addStudent={addStudent} />
-      <Students student={student} />
-    </>
+      <Students />
+    </GlobalState>
   )
 }
 

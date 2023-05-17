@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import StudentItems from './StudentItems';
+import globalContext from '../global/globalContext';
 
-const students = ({ student }) => {
+const Students = () => {
+
+    const { students, addStudents } = useContext(globalContext);
+
     return (
         <div>
-            {student.length ? student.map((v, i) => <StudentItems v={v} i={i} key={i} />) : <h3>No students Found</h3>}
+            {/* {student.length ? student.map((v, i) => <StudentItems v={v} i={i} key={i} />) : <h3>No students Found</h3>} */}
+            {students.length ? students.map((v, i) => <StudentItems v={v} i={i} key={i} />) : <h3>No students Found</h3>}
         </div>
     )
 }
 
-export default students
+export default Students
