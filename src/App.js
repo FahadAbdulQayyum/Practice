@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Students from './components/students'
 import Form from './components/form'
 import GlobalState from './global/globalState'
