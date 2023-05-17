@@ -5,13 +5,9 @@ import GlobalState from './global/globalState'
 
 const App = () => {
 
-  const [student, setStudent] = useState([])
-
-  const addStudent = newStudent => setStudent([...student, newStudent])
-
   return (
     <GlobalState>
-      <Form addStudent={addStudent} />
+      <Form />
       <Students />
     </GlobalState>
   )
