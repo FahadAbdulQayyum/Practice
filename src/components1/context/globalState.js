@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import globalContext from "./globalContext";
-import globalReducer from "../context/globalReducer";
+import globalReducer from "./globalReducer";
 import axios from 'axios';
 
 const GlobalState = props => {

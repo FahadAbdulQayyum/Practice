@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import PostItems from './postItems';
 import axios from 'axios';
-import globalContext from '../global/globalContext';
+import globalContext from './context/globalContext';
 
 const Posts = () => {
 
@@ -9,9 +9,7 @@ const Posts = () => {
 
     const { page, addPosts, posts } = useContext(globalContext);
 
-    const [post, setPost] = useState({
-
-    })
+    // const [post, setPost] = useState({})
 
     // useEffect(() => {
     //     axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
@@ -21,13 +19,13 @@ const Posts = () => {
     // }, [])
 
     useEffect(() => {
-        // addPosts(page);
+        addPosts(page);
     }, [])
 
     return (
         <div>
             <ol>
-                {post.map((v, i) => <PostItems post={v} i={i} key={i} />)}
+                {posts.map((v, i) => <PostItems post={v} i={i} key={i} />)}
             </ol>
             <button
                 onClick={() => addPosts(page)}

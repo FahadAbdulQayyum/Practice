@@ -1,6 +1,6 @@
 import React from 'react'
 import Posts from './components1/posts'
-import GlobalState from './global/globalState'
+import GlobalState from './components1/context/globalState'
 const App = () => {
   return (
     <GlobalState>
@@ -13,7 +13,7 @@ const App = () => {
 
 export default App
 
-
+  // ***************************************** //
 
 // import React from 'react'
 // import Students from './components/students'
