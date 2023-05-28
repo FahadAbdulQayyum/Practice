@@ -17,12 +17,13 @@ const Main = () => {
     ]
 
     return (
-        <div>
-            <GlobalState>
+        <GlobalState>
+            <div>
                 <Form />
-                <Students students={students} />
-            </GlobalState>
-        </div>
+                {/* <Students students={students} /> */}
+                <Students />
+            </div>
+        </GlobalState>
     )
 }
 

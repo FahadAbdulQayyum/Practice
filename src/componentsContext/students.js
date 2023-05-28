@@ -9,9 +9,12 @@ const Students = () => {
 
     return (
         <div>
-            {students.map(student => (
-                <StudentItems student={student} />
-            ))}
+            {students.map((student, index) => (
+                <div key={index}>
+                    {<StudentItems student={student} />}
+                </div>
+            )
+            )}
         </div>
     )
 }

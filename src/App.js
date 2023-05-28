@@ -1,7 +1,9 @@
 import React from 'react';
 // import Main from './components2/main';
 // import Main from './componentsContext/main';
-import Main from './componentsContext/main';
+// import Main from './componentsContext/main';
+// import Main from './componentsContextApi/main';
+import Main from './componentsContextApiPosts/main';
 
 const App = () => {
   return (
