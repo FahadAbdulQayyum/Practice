@@ -4,7 +4,7 @@ import globalContext from '../global/globalContext';
 
 const Students = () => {
 
-    const { students, addStudents } = useContext(globalContext);
+    const { students } = useContext(globalContext);
 
     return (
         <div>
